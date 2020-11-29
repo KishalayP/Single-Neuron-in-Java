@@ -106,10 +106,11 @@ public class NeuralNetwork
     
     
     result=sigmoid(dot(chk,synaptic_weights));
-    
+    sc.close();
     System.out.println("Synaptic Weights after training:");
     printing(synaptic_weights);
-    printing(tosy);
+    
+
     //Result Output Block
     System.out.print("The Result is:");
     for(int i=0;i<1;i++)
