@@ -109,7 +109,7 @@ public class NeuralNetwork
     
     System.out.println("Synaptic Weights after training:");
     printing(synaptic_weights);
-
+    printing(tosy);
     //Result Output Block
     System.out.print("The Result is:");
     for(int i=0;i<1;i++)
@@ -140,7 +140,8 @@ public class NeuralNetwork
             {
                System.out.print("  "+a[i][j]);
             }
-        }System.out.println();
+            System.out.println();
+        }
     }
 
 
