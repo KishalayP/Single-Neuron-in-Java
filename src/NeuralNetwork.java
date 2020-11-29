@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class KP
+public class NeuralNetwork
 {
     
     public static void main(String[] args) 
@@ -30,7 +30,9 @@ public class KP
         double result[][]=new double[1][1];
 
         
-
+        System.out.println("Synaptic Weights before training:");
+        printing(synaptic_weights);
+        System.out.println("Enter 3 Inputs");
 
     for (int itr=0;itr<1000000;itr++)
     {
@@ -104,7 +106,8 @@ public class KP
     
     
     result=sigmoid(dot(chk,synaptic_weights));
-    printing(chk);
+    
+    System.out.println("Synaptic Weights after training:");
     printing(synaptic_weights);
 
     //Result Output Block
@@ -126,7 +129,7 @@ public class KP
         int r=a.length;
         int c=a[0].length;
 
-        System.out.println("Dimensions");
+        System.out.println("Dimensions=");
         System.out.println("Rows: "+r);
         System.out.println("Columns: "+c);
         System.out.println("Matrix: ");
@@ -135,12 +138,11 @@ public class KP
         {
             for(int j=0;j<a[0].length;j++)
             {
-               System.out.println(a[i][j]);
+               System.out.print("  "+a[i][j]);
             }
-        }
+        }System.out.println();
     }
 
-    
 
     static double[][] sigmoid(double [][] x)
      {
