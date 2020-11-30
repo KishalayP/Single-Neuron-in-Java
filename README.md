@@ -33,4 +33,5 @@ Basic implementation of a Single Neuron in Java from scratch.
      Example Test Case:
 
      1          0          0                     1
-
+ 
+ Use these weights in case weight intialization does not work: double synaptic_weights[][]={{-0.16595599},{0.44064899},{-0.99977125}}; 
