@@ -1,7 +1,6 @@
 public class Matrix_Math {
 
     //Maths and Matrix Manipulation Functions
-
     
     static double[][] sigmoid(double [][] x)
      {

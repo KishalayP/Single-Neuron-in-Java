@@ -1,6 +1,5 @@
 public class NeuralNetwork
 {
-    
     public static void main(String[] args) 
     {
         double input_layer[][]={ {0,0,1},
