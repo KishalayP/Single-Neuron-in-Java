@@ -8,24 +8,32 @@ public class NeuralNetwork_Improved
         double input_layer[][]={ {0,0,1},
                                  {1,1,1},
                                  {1,0,1},
-                                 {0,1,1} };
+                                 {0,1,1},
+                                 {1,0,0} };
 
         double output_layer[][]={ {0},
                                   {1},
+                                  {0},
                                   {1},
                                   {0}  };
-        
 
-        double synaptic_weights[][]=new double[3][1];       
-        double error[][]=new double[4][1];
-        double adjustments[][]=new double[4][1];
-        double training_inputs[][]=new double[4][3];
-        double training_outputs[][]=new double[4][1];
-        double toto[][]=new double[4][1];
-        double toad[][]=new double[4][1];
-        double tosy[][]=new double[4][1];
-        double input_layer_transposed[][]=new double[3][4];
-        double chk [][]=new double[1][3];
+        int ri=input_layer.length;
+        int ci=input_layer[0].length;
+        int ro=output_layer.length;
+        int co=output_layer[0].length;
+
+        System.out.println(ci);
+
+        double synaptic_weights[][]=new double[ci][1];       
+        double error[][]=new double[ro][co];
+        double adjustments[][]=new double[ro][co];
+        double training_inputs[][]=new double[ri][ci];
+        double training_outputs[][]=new double[ro][co];
+        double toto[][]=new double[ro][co];
+        double toad[][]=new double[ro][co];
+        double tosy[][]=new double[ro][co];
+        double input_layer_transposed[][]=new double[ro][co];
+        double chk [][]=new double[1][ci];
         double result[][]=new double[1][1];
 
 
@@ -124,11 +132,11 @@ public class NeuralNetwork_Improved
 
     static double[][] sigmoid(double [][] x)
      {
-         double eu [][]=new double[4][1];
-         double e [][]=new double[4][1];
+         double eu [][]=new double[x.length][x[0].length];
+         double e [][]=new double[x.length][x[0].length];
 
         for(int i=0;i<x.length;i++){
-            for(int j=0;j<x[i].length;j++){ 
+            for(int j=0;j<x[0].length;j++){ 
                 eu[i][j]=Math.exp(-x[i][j]);
                 e[i][j]=1/(1+eu[i][j]);
             }
@@ -138,7 +146,7 @@ public class NeuralNetwork_Improved
 
     static double [][] sigmoid_derivative(double [][]arr)
     {
-        double d [][]=new double[4][1];
+        double d [][]=new double[arr.length][arr[0].length];
         for(int i=0;i<arr.length;i++){
             for(int j=0;j<arr[0].length;j++)
             { 
