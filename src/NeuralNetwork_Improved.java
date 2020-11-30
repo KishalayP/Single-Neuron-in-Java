@@ -22,7 +22,7 @@ public class NeuralNetwork_Improved
         int ro=output_layer.length;
         int co=output_layer[0].length;
 
-        double synaptic_weights[][]=new double[ci][1];       
+        double synaptic_weights[][]=new double[ci][co];       
         double error[][]=new double[ro][co];
         double adjustments[][]=new double[ro][co];
         double training_inputs[][]=new double[ri][ci];
@@ -31,7 +31,7 @@ public class NeuralNetwork_Improved
         double toad[][]=new double[ro][co];
         double tosy[][]=new double[ro][co];
         double input_layer_transposed[][]=new double[ro][co];
-        double chk [][]=new double[1][ci];
+        double chk [][]=new double[co][ci];
         double result[][]=new double[1][1];
 
 
