@@ -22,8 +22,6 @@ public class NeuralNetwork_Improved
         int ro=output_layer.length;
         int co=output_layer[0].length;
 
-        System.out.println(ci);
-
         double synaptic_weights[][]=new double[ci][1];       
         double error[][]=new double[ro][co];
         double adjustments[][]=new double[ro][co];
