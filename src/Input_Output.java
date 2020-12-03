@@ -3,18 +3,34 @@ public class Input_Output {
 
     //I/O Functions
 
-    double [][] user_input()
+    double [][] training_from_user()
     {
-        double chk [][]=new double[1][3];
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter no. of rows");
+        int r=sc.nextInt();
+        System.out.println("Enter no. of columns");
+        int c=sc.nextInt();
+        double training_matrix_user[][]=new double[r][c];
+        for(int i=0;i<r;i++){
+            System.out.println("Enter Elements for "+(i+1)+" Row");
+            for(int j=0;j<c;j++)
+            {   
+                training_matrix_user[i][j]=sc.nextInt();
+            }
+        }
+        return training_matrix_user;
+    }
+    double [][] user_input(int r,int c)
+    {
+        double chk [][]=new double[r][c];
         Scanner sc=new Scanner(System.in);
       
-        for(int i=0;i<1;i++){
-            for(int j=0;j<3;j++)
+        for(int i=0;i<r;i++){
+            for(int j=0;j<c;j++)
             {               
                 chk[i][j]=sc.nextInt();
             }
         }
-        sc.close();
         return chk;
     }
 

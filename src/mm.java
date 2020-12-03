@@ -1,4 +1,4 @@
-public class Matrix_Math {
+public class mm {
 
     //Maths and Matrix Manipulation Functions
     
@@ -48,10 +48,10 @@ public class Matrix_Math {
 
     static double[][] transpose(double[][]a)
     {
-        double t[][]=new double[3][4];
-        for(int i=0;i<3;i++)
+        double t[][]=new double[a.length][a[0].length];
+        for(int i=0;i<a.length;i++)
         {
-            for(int j=i+1;j<4;j++)
+            for(int j=i+1;j<a[0].length;j++)
             {
                 t[i][j]=a[j][i];
             }
@@ -73,7 +73,7 @@ public class Matrix_Math {
 
     static double[][] sub(double[][]a ,double[][] b)
     {
-    double s[][]=new double[a.length][b[0].length];
+    double s[][]=new double[a.length][a[0].length];
         for(int i=0;i<a.length;i++){
             for(int j=0;j<a[0].length;j++)
             {
