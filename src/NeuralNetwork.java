@@ -17,7 +17,7 @@ public class NeuralNetwork
 
         Input_Output io=new Input_Output();
         char choice='y';
-        System.out.println("Do you want to add your own training input and outputs to do so press 'y' or press 'n' to continue with default values ");
+        System.out.println("Do you want to add your own training inputs and outputs to do so press 'y' or press 'n' to continue with default values ");
         Scanner input=new Scanner(System.in);
         char s=input.next().charAt(0);
         
