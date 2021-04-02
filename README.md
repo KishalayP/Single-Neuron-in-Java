@@ -27,7 +27,7 @@ Basic implementation of a Single Neuron in Java from scratch.
      0          1          1                     0
 
 
-     As can be seen from the above it can be inferred that whenever the input A is '1' the output is '1' else '0'.
+     As can be seen from the above table it can be inferred that whenever the input A is '1' the output is '1' else '0'.
      The model is trained on the above data using a simple error correction loop and sigmoid function for scaling.
 
      Example Test Case:
